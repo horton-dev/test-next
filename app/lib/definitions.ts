@@ -1,7 +1,7 @@
-// This file contains type definitions for your data.
-// It describes the shape of the data, and what data type each property should accept.
-// For simplicity of teaching, we're manually defining these types.
-// However, these types are generated automatically if you're using an ORM such as Prisma.
+// Ce fichier contient des définitions de type pour vos données.
+// Il décrit la forme des données et le type de données que chaque propriété doit accepter.
+// Pour simplifier l’enseignement, nous définissons manuellement ces types.
+// Cependant, ces types sont générés automatiquement si vous utilisez un ORM tel que Prisma.
 export type User = {
   id: string;
   name: string;
@@ -21,8 +21,8 @@ export type Invoice = {
   customer_id: string;
   amount: number;
   date: string;
-  // In TypeScript, this is called a string union type.
-  // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
+  // En TypeScript, cela s'appelle un type d'union de chaîne.
+  // Cela signifie que la propriété « statut » ne peut être qu'une des deux chaînes : « en attente » ou « payé ».
   status: 'pending' | 'paid';
 };
 
@@ -39,7 +39,7 @@ export type LatestInvoice = {
   amount: string;
 };
 
-// The database returns a number for amount, but we later format it to a string with the formatCurrency function
+// La base de données renvoie un nombre pour le montant, mais nous le formatons ensuite en chaîne avec la fonction formatCurrency
 export type LatestInvoiceRaw = Omit<LatestInvoice, 'amount'> & {
   amount: number;
 };

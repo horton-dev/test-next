@@ -1,4 +1,4 @@
-// This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
+// Ce fichier contient des données d'espace réservé que vous remplacerez par des données réelles dans le chapitre Récupération de données :
 // https://nextjs.org/learn/dashboard-app/fetching-data
 const users = [
   {
